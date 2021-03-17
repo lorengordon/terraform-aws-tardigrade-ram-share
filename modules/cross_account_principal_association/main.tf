@@ -17,6 +17,10 @@ module "accepter" {
   source = "../share_accepter"
 
   resource_share_arn = module.principal_association.principal_association.resource_share_arn
+
+  depends_on = [
+    module.principal_association
+  ]
 }
 
 data "aws_caller_identity" "this" {}
