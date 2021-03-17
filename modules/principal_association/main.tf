@@ -4,6 +4,6 @@ resource "aws_ram_principal_association" "this" {
 
   # The invitation sometime takes a few seconds to propagate
   provisioner "local-exec" {
-    command = "python -c 'import time; time.sleep(10)'"
+    command = "python -c 'import time; time.sleep(30)'"
   }
 }
